@@ -3,8 +3,8 @@ import shlex
 
 from flask import Flask
 
-INITIAL_LAUNCHER_CMD = "bash launchers/initial.sh"
-START_EXPERIMENT_LAUNCHER_CMD = "bash launchers/start-experiment.sh"
+INITIAL_LAUNCHER_CMD = "bash launchers/web_app.sh"
+START_EXPERIMENT_LAUNCHER_CMD = "bash launchers/driving_simulator.sh"
 
 app = Flask(__name__)
 
@@ -13,10 +13,9 @@ def exec(cmd):
     subprocess.Popen(shlex.split(cmd))
 
 
-@app.route('/experiment/start/')
+@app.route('/start-simulation')
 def start_experiment():
     exec(START_EXPERIMENT_LAUNCHER_CMD)
-
     return "Experiment started"
 
 
