@@ -1,14 +1,15 @@
-export FRONTEND_PATH="/home/andres/Documentos/programacion/drt/timeline-chart"
+export FRONTEND_PATH="/home/leonel/facu/lifia/timeline_chart/"
+export API_PATH="/home/leonel/facu/lifia/server-rest/"
 
-export API_PATH="/home/andres/Documentos/programacion/drt/server-rest"
+export SIMULATOR_PATH="/home/leonel/facu/lifia/carla_simulator/"
+export FACE_DETECTOR_PATH="/home/leonel/facu/lifia/face-detector/"
 
-export SIMULATOR_PATH="/home/andres/Documentos/programacion/drt/carla_simulator/"
-
-export CARLA_SV_PATH="/home/andres/Documentos/programacion/drt/carla_simulator/Carla"
-export CARLA_SV_ARGS="-opengl -quality-level=Low"
+export CARLA_SV_PATH="/home/leonel/facu/lifia/carla_simulator/Carla/CarlaUE4.sh"
+export CARLA_SV_ARGS=""
 export CARLA_SV_IP="localhost"
 export CARLA_SV_PORT="2000"
 
 export CARLA_CLIENT_ARGS=""
+export FACE_DETECTOR_ARGS=""
 
-export ENV_CMD="source venv/bin/activate"
+export ENV_CMD="source env/bin/activate"
