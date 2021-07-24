@@ -16,7 +16,7 @@ wait_carla_sv() {
 launch_carla_sv() {
 	echo -e "${INFO_COLOR}Starting carla sv . . .${NOCOLOR}"
 
-	bash $CARLA_SV_PATH $CARLA_SV_ARGS
+	bash $CARLA_SV_PATH $CARLA_SV_ARGS &
 }
 
 launch_carla_client() {
@@ -24,14 +24,15 @@ launch_carla_client() {
 
 	wait_carla_sv
     cd "simulator"
-	python3 app.py $CARLA_CLIENT_ARGS
+	python3 app.py $CARLA_CLIENT_ARGS &
 }
 
 launch_face_detector() {
 	echo -e "${INFO_COLOR}Starting face detector . . .${NOCOLOR}"
 
+    sleep 2
     $ENV_CMD
-	python3 app.py $FACE_DETECTOR_ARGS
+	python3 app.py $FACE_DETECTOR_ARGS &
 }
 
 
@@ -44,7 +45,7 @@ if  is_carla_sv_running; then
 fi
 
 cd $SIMULATOR_PATH
-launch_carla_sv &>> $LOG_PATH/carla_sv.log &
-launch_carla_client &>> $LOG_PATH/simulator.log &
+launch_carla_sv &>> $LOG_PATH/carla_sv.log
+launch_carla_client &>> $LOG_PATH/simulator.log
 cd $FACE_DETECTOR_PATH
-launch_face_detector &>> $LOG_PATH/face_detector.log &
+launch_face_detector &>> $LOG_PATH/face_detector.log
