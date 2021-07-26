@@ -30,7 +30,7 @@ launch_carla_client() {
 launch_face_detector() {
 	echo -e "${INFO_COLOR}Starting face detector . . .${NOCOLOR}"
 
-    sleep 2
+    sleep 4
     $ENV_CMD
 	python3 app.py $FACE_DETECTOR_ARGS &
 }

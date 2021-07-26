@@ -9,7 +9,7 @@ export CARLA_SV_ARGS=""
 export CARLA_SV_IP="localhost"
 export CARLA_SV_PORT="2000"
 
-export CARLA_CLIENT_ARGS=""
+export CARLA_CLIENT_ARGS="-w"
 export FACE_DETECTOR_ARGS=""
 
 export ENV_CMD="source env/bin/activate"
