@@ -1,7 +1,8 @@
 export FRONTEND_PATH="/home/leonel/facu/lifia/timeline_chart/"
 export API_PATH="/home/leonel/facu/lifia/server-rest/"
 
-export SIMULATOR_PATH="/home/leonel/facu/lifia/carla_simulator/"
+export SIMULATOR_CLIENT_DIR="/home/leonel/facu/lifia/carla_simulator/simulator/"
+export SIMULATOR_MODULES_DIR="/home/leonel/facu/lifia/carla_simulator/modules/"
 export FACE_DETECTOR_PATH="/home/leonel/facu/lifia/face-detector/"
 
 export CARLA_SV_PATH="/home/leonel/facu/lifia/carla_simulator/Carla/CarlaUE4.sh"

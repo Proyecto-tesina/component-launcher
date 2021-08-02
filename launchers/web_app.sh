@@ -23,6 +23,7 @@ restart_log_files() {
     echo "" > $LOG_PATH/simulator.log
     echo "" > $LOG_PATH/carla_sv.log
     echo "" > $LOG_PATH/face_detector.log
+    echo "" > $LOG_PATH/modules.log
 }
 
 
